@@ -261,15 +261,21 @@ class _HomeScreenState extends State<HomeScreen> {
             IconButton(onPressed: (){}, icon: Icon(Icons.access_alarm)),
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Container(
-                width: 60,
               
-                decoration: BoxDecoration(
-                  color: Colors.blue,
-                  borderRadius: BorderRadius.circular(50)
-                ),
+              child: Container(
+               padding: EdgeInsets.symmetric(horizontal: 4),
+            decoration: BoxDecoration(
+              color: Colors.blue, // Set the background color to blue
+              borderRadius: BorderRadius.circular(50),
               
               ),
+               child: Row(
+              children: [
+                Icon(Icons.person, color: Colors.white), // Person icon
+                Icon(Icons.arrow_drop_down, color: Colors.white), // Dropdown icon
+              ],
+            ),
+            )
             )
 
           ],
