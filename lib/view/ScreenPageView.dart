@@ -1,9 +1,12 @@
 import 'dart:async';
+import 'package:MyMoov/view/HomeMoov.dart';
+import 'package:MyMoov/view/homeScreen.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'AnalyseForfait.dart';
-import 'AnnalyseDonne.dart';
+import 'AchatPage.dart';
+import 'PayementPage.dart';
 
 class ScreenPageView extends StatefulWidget {
   const ScreenPageView({super.key});
@@ -61,9 +64,9 @@ class _ScreenPageViewState extends State<ScreenPageView> {
               controller: _pageController,
               onPageChanged: _onPageChanged,
               children: [
-                buildPage("Images/moov1.jpg"),
-                buildPage("Images/MOOV3.jpg",),
-                buildPage("Images/moov2.jpg"),
+                buildPage("Images/moov1.jpg", "Réseaux sociaux ou Business en ligne, soyez Zen avec MoovSmart" , ),
+                buildPage("Images/MOOV3.jpg", "Des forfaits adaptés à vos conversations de longues durées"),
+                buildPage("Images/moov2.jpg", "Vous êtes plus SMS, MoovSmart s’occupe de vous"),
               ],
             ),
           ),
@@ -73,7 +76,7 @@ class _ScreenPageViewState extends State<ScreenPageView> {
     );
   }
 
-  Widget buildPage(String imagePath) {
+  Widget buildPage(String imagePath, String description) {
     return SingleChildScrollView(
       child: Column(
         children: [
@@ -94,7 +97,7 @@ class _ScreenPageViewState extends State<ScreenPageView> {
           Container(
             width: Get.width / 1.2,
             child: Text(
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+             description,
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 20),
             ),
@@ -102,7 +105,7 @@ class _ScreenPageViewState extends State<ScreenPageView> {
           SizedBox(height: Get.height / 18),
           ElevatedButton(
             onPressed: () {
-              Get.to(AnalyseDonnee());
+              Get.to(HomeScreen(), transition: Transition.rightToLeft);
             },
             style: ElevatedButton.styleFrom(
               backgroundColor: Color.fromARGB(237, 251, 143, 66),
@@ -119,7 +122,7 @@ class _ScreenPageViewState extends State<ScreenPageView> {
           SizedBox(height: Get.height / 70),
           ElevatedButton(
             onPressed: () {
-              Get.to(AnalyseDonnee());
+              Get.to(HomeScreen(), transition: Transition.rightToLeft);
             },
             style: ElevatedButton.styleFrom(
               backgroundColor: Color(0xFF0EC6707),
@@ -134,7 +137,7 @@ class _ScreenPageViewState extends State<ScreenPageView> {
           SizedBox(height: Get.height / 70),
           ElevatedButton(
             onPressed: () {
-              Get.to(AnalyseDonnee());
+              Get.to(HomeScreen(), transition: Transition.rightToLeft);
             },
             style: ElevatedButton.styleFrom(
               backgroundColor: Color.fromARGB(237, 251, 143, 66),
@@ -163,9 +166,7 @@ class _ScreenPageViewState extends State<ScreenPageView> {
           height: 10,
           width: _currentPage == index ? 20 : 10,
           decoration: BoxDecoration(
-            color: _currentPage == index
-                ? Colors.blue
-                : Colors.grey,
+            color: _currentPage == index ? Colors.blue : Colors.grey,
             borderRadius: BorderRadius.circular(12),
           ),
         );
