@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 var colorBlue =  Color(0xFF005BA4);
-var Logo = "Images/LOGOMOOV.png";
+var Logo = "Images/smartlogo.png";
 var colorOrange =  Color(0xFF0EC6707 );
 
 var gradientblue = DecoratedBox(

@@ -13,13 +13,12 @@ import 'AchatPage.dart';
 
 class HomeMoovScreen extends StatefulWidget {
   const HomeMoovScreen({super.key});
-
   @override
   State<HomeMoovScreen> createState() => _HomeMoovScreenState();
 }
 class _HomeMoovScreenState extends State<HomeMoovScreen> with TickerProviderStateMixin{ 
-  @override
-  Widget build(BuildContext context) {
+ @override
+Widget build(BuildContext context) {
 TabController _tabController = TabController(length: 4, vsync: this);
 double screenWidth = MediaQuery.of(context).size.width;
 double screenHeight = MediaQuery.of(context).size.height;
@@ -40,7 +39,6 @@ double screenHeight = MediaQuery.of(context).size.height;
             ),
           ),
   
-    
      //  SizedBox(height: 25,),
           Divider(color: colorBlue, thickness: 2),
            Container(
@@ -95,8 +93,7 @@ double screenHeight = MediaQuery.of(context).size.height;
   }
 
 Widget myWidgetConsoGeneral(BuildContext context) {
-  double screenWidth = MediaQuery.of(context).size.width;
-double screenHeight = MediaQuery.of(context).size.height;
+ 
 // TabController _tabController = TabController(length: 2, vsync: this);
   return MediaQuery.removePadding(
     context: context,

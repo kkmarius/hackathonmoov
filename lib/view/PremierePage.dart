@@ -27,13 +27,13 @@ class _PremierePageState extends State<PremierePage> {
   @override
   Widget build(BuildContext context) {
 return Scaffold(
-backgroundColor: colorBlue,
+backgroundColor: Colors.white,
 body: Center(
           child: Container(
             width: Get.width/1.8, 
             height: Get.height/1.8, 
             decoration: BoxDecoration(
-              image: DecorationImage(image: AssetImage(Logo), fit: BoxFit.cover),
+              image: DecorationImage(image: AssetImage(Logo), fit: BoxFit.contain),
               shape: BoxShape.circle,
               boxShadow: [
                 BoxShadow(
